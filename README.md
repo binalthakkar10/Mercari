@@ -1,0 +1,1 @@
+echo "# Mercari" >> README.md
