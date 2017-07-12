@@ -1,0 +1,9 @@
+	.img{
+			position: relative;
+			left: 20%;
+			top: 20%;
+		}
+		h1,h3{
+			position: relative;
+			text-align: center;
+		}

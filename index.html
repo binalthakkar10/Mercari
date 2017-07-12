@@ -1,0 +1,33 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="css/style.css">
+	</head>
+		<body>
+		<h1> Display Banner </h1>
+			<span id="displayImage"></span>
+		</body>
+	<script src="js/jquery-3.2.1.min.js"></script>	
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		 $.ajax({
+        url: "index.php",
+        type: "get",
+        success: function (response) {  
+          if(response.image!=''){             
+        	$('#displayImage').html(response.image);
+         }
+         if(response.timeAvailability!=''){      
+	         var miliseconds = response.timeAvailability; 
+		      setTimeout(function(){
+				       $('#thisImg').hide();
+				    }, miliseconds);         
+         }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+           console.log(textStatus, errorThrown);
+        }
+    });   
+});
+   </script>
+</html>
+
